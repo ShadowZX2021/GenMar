@@ -1,0 +1,121 @@
+/*Reseteo para eliminar margenes predeterminados*/
+body{
+    margin: 0;
+    font-family: Arial,sans-serif;
+    background-color: red;
+}
+body{
+    display: flex;
+}
+
+/*Estilo de contenedor del menu */
+.menu{
+    background-color: #333; /*Color del fondo*/
+    padding: 1rem;
+    width: 200px;
+    height: 100vh;
+}
+
+/*Estilo de la lista: eliminar puntos y alinea horizontalmente*/
+.menu-link{
+    list-style: none;
+    display: block;
+    gap: 20px; /*Espaciado entre elementos*/
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.menu-link a{
+    text-decoration: none;/*Elinina subrayado*/
+    color:white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.03;
+    justify-content: left;
+}
+.menu-link a:hover{
+    background-color: #555;
+    border-radius:5px ;
+}
+
+.cuadro {
+    width: 520px; 
+    min-height: 250px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.15); /*transparente */
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px); /* efecto vidrio */
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+
+    text-align: center;
+}
+
+.contenido{
+    flex: 1;/*ocupa el resto del espacio*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reloj{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.button{
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.menu.pomodoro {
+    background-color: #333;
+}
+
+.menu.corto {
+    background-color: #4caf50;
+}
+
+.menu.largo {
+    background-color: #2196f3;
+}
+
+.tetris-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.tetris-bg span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: cyan;
+    opacity: 0.7;
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.cuadro, #reloj {
+    color: rgb(107, 1, 91);
+}

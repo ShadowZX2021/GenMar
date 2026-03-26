@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <title>Pomo</title>
+    </head>
+
+    <body>
+        <div class="tetris-bg"></div>
+        <!--Menu-->
+        <nav class="menu">
+            <ul class="menu-link md-3" id="modo">
+                <li><a id="modoTexto" href="index.html">Pomodoro</a></li>
+                
+            </ul>
+        </nav>
+
+        <!--Cronometro-->
+        <div class = "contenido">
+            <div class="cuadro">
+
+                <div class="mb-3 d-flex justify-content-center gap-2 flex-wrap">
+                    <button class="btn btn-danger" onclick="modoPomodoro()">Pomodoro</button>
+                    <button class="btn btn-success" onclick="modoCorto()">Descanso Corto</button>
+<!--                <button class="btn btn-primary" onclick="modoLargo()">Descanso Largo</button>                -->
+                </div>
+
+                <div class="display-4 fw-bold my-3" id="reloj">25:00</div>
+                
+                <div class="d-flex justify-content-center gap-2">
+                    <button class="btn btn-dark" onclick="iniciar()">Iniciar</button>
+                    <button class="btn btn-warning" onclick="pausar()">Pausar</button>
+                    <button class="btn btn-secondary" onclick="reiniciar()">Reiniciar</button>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="cronometro.js"></script>
+    </body>
+</html>
