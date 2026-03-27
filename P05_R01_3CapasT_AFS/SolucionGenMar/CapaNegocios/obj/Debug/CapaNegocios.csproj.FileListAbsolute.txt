@@ -1,0 +1,24 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.dll.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\bin\Debug\CapaEntidades.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\obj\Debug\CapaNego.1D246B3C.Up2Date
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaDatos.dll.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\bin\Debug\CapaEntidades.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\obj\Debug\CapaNego.1D246B3C.Up2Date
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaNegocios\obj\Debug\CapaNegocios.pdb

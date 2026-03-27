@@ -1,0 +1,44 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCamiones.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmChoferes.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmRutas.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaEntidades.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaNegocios.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.exe.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaNegocios.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaEntidades.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaNegocios.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\bin\Debug\CapaDatos.dll.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.exe.config
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCamiones.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmChoferes.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.FrmRutas.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\P5\P05_R01_3CapasT_AFS\SolucionGenMar\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

@@ -1,0 +1,6 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\bin\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\bin\Debug\CapaEntidades.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\obj\Debug\CapaEntidades.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\obj\Debug\CapaEntidades.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\obj\Debug\CapaEntidades.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Practica 3 Capas\SolucionGenMar\CapaEntidades\obj\Debug\CapaEntidades.pdb

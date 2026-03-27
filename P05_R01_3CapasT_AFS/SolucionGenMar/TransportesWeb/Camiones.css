@@ -1,0 +1,106 @@
+﻿/* CONTENEDOR */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TÍTULO */
+h1 {
+    color: #b30000;
+    border-bottom: 3px solid #b30000;
+    padding-bottom: 10px;
+}
+
+/* FILTROS */
+.filtros {
+    background: #fff0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+    .filtros label {
+        font-weight: bold;
+        color: #800000;
+        margin-right: 10px;
+    }
+
+/* BOTONES */
+.btn-rojo {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+    .btn-rojo:hover {
+        background-color: #800000;
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn-danger:hover {
+        background-color: #a71d2a;
+    }
+
+/* TABLA */
+.grid-rojo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .grid-rojo th,
+    .grid-rojo td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+.grid-rojo-header {
+    background-color: #b30000;
+    color: white;
+}
+
+.grid-rojo tr:nth-child(even) {
+    background-color: #fff5f5;
+}
+
+.grid-rojo tr:hover {
+    background-color: #ffe5e5;
+}
+
+/* BADGES */
+.badge-success {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+/* PANEL DE MENSAJE */
+.info-mensaje {
+    background-color: #fff0f0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #b30000;
+    margin-bottom: 20px;
+}
