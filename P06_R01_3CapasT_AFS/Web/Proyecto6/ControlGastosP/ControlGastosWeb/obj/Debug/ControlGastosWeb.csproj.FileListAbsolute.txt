@@ -1,0 +1,2 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\ControlGastosWeb\obj\Debug\ControlGastosWeb.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\ControlGastosWeb\obj\Debug\ControlGastosWeb.csproj.CoreCompileInputs.cache

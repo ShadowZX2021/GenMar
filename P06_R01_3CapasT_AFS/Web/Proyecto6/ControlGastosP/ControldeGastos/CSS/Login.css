@@ -1,0 +1,128 @@
+﻿body {
+    margin: 0;
+    font-family: 'Segoe UI';
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #1e1e1e, #2d0000, #1e1e1e);
+    background-size: 600% 600%;
+    animation: fondoAnimado 10s ease infinite;
+}
+
+@keyframes fondoAnimado {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    width: 360px;
+    padding: 35px;
+    background: rgba(45, 45, 45, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.7);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #ff4d4d;
+    letter-spacing: 1px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input:focus {
+    box-shadow: 0 0 10px rgba(255,0,0,0.6);
+    transform: scale(1.02);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #c00000, #ff0000);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.btn-login:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ff0000, #ff4d4d);
+}
+
+#lblMensaje {
+    color: #ff4d4d;
+    margin-top: 12px;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.titulo-login {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #ff4d4d;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255,0,0,0.6);
+    animation: glowTitulo 2s ease-in-out infinite alternate;
+}

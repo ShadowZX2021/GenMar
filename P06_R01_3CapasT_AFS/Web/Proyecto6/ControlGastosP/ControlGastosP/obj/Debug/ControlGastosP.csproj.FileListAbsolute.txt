@@ -1,0 +1,6 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\bin\Debug\ControlGastosP.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\bin\Debug\ControlGastosP.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\obj\Debug\ControlGastosP.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\obj\Debug\ControlGastosP.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\obj\Debug\ControlGastosP.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto gastos Personales\ControlGastosP\ControlGastosP\obj\Debug\ControlGastosP.pdb

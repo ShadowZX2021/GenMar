@@ -1,0 +1,12 @@
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\bin\Debug\VO.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\bin\Debug\VO.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\obj\Debug\VO.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\obj\Debug\VO.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\obj\Debug\VO.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\ControlGastosP\VO\obj\Debug\VO.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\bin\Debug\VO.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\bin\Debug\VO.pdb
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\obj\Debug\VO.csproj.AssemblyReference.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\obj\Debug\VO.csproj.CoreCompileInputs.cache
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\obj\Debug\VO.dll
+C:\Users\stmme\OneDrive\Documentos2\Curso .Net\GenMar\Proyecto 6\Web\P06_R01_3CapasT_AFS\ControlGastosP\VO\obj\Debug\VO.pdb
