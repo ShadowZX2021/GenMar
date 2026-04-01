@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Calculadora Científica</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CalculadoraMVCGenMar.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/calculadora.css" />
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        .navbar {
+            background-color: #888888 !important;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: black !important;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 0px 0; 
+            background-color: rgba(0,0,0,0.2);
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar gris y limpia -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Calculadora Cientifica</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <!-- Menú vacío -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenedor principal para la vista -->
+    <div class="container container-center">
+        <main role="main" class="pb-3 w-100">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer personalizado -->
+    <footer class="footer">
+        <p>Proyecto: Calculadora Científica - Desarrollado por Andrés Ferrer Servín</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

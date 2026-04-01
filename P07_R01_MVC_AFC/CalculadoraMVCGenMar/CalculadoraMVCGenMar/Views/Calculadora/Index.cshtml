@@ -1,0 +1,46 @@
+﻿@model CalculadoraMVCGenMar.Models.CalculadoraModel
+
+<link rel="stylesheet" href="~/css/calculadora.css" />
+
+<div class="container-center">
+    <div class="calculadora-card">
+        <h4 class="text-center mb-3">🧮 Calculadora Científica</h4>
+
+        <form asp-action="Calcular" method="post">
+            <!-- Inputs ligados al modelo -->
+            <input asp-for="Numero1" class="input-num" placeholder="Número 1" />
+            <input asp-for="Numero2" class="input-num" placeholder="Número 2" />
+
+            <!-- Botones de operaciones -->
+            <div class="botones-grid">
+                <button type="submit" name="Operacion" value="suma">➕ Suma</button>
+                <button type="submit" name="Operacion" value="resta">➖ Resta</button>
+                <button type="submit" name="Operacion" value="multiplicar">✖ Multiplicar</button>
+                <button type="submit" name="Operacion" value="dividir">➗ Dividir</button>
+
+                <button type="submit" name="Operacion" value="potencia">xʸ Potencia</button>
+                <button type="submit" name="Operacion" value="raiz">√ Raíz</button>
+                <button type="submit" name="Operacion" value="log">log</button>
+                <button type="submit" name="Operacion" value="seno">sin</button>
+                <button type="submit" name="Operacion" value="coseno">cos</button>
+                <button type="submit" name="Operacion" value="tangente">tan</button>
+                <button type="submit" name="Operacion" value="factorial">! Factorial</button>
+            </div>
+        </form>
+
+        <!-- Resultado -->
+        @if (Model.Resultado != null)
+        {
+            <div id="resultado" class="alert alert-success mt-3 text-center fs-5">
+                Resultado: <strong>@Model.Resultado</strong>
+            </div>
+        }
+
+        <!-- Error -->
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger mt-3 text-center">@ViewBag.Error</div>
+        }
+    </div>
+</div>
+
