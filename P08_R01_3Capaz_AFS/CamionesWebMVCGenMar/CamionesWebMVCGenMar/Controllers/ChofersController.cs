@@ -1,12 +1,15 @@
-﻿using System;
+﻿using CamionesWebMVCGenMar.Models;
+using CamionesWebMVCGenMar.Models.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CamionesWebMVCGenMar.Models;
+using System.Web.UI;
 
 namespace CamionesWebMVCGenMar.Controllers
 {
@@ -15,9 +18,43 @@ namespace CamionesWebMVCGenMar.Controllers
         private GenMarEntities db = new GenMarEntities();
 
         // GET: Chofers
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pageSize = 5)
         {
-            return View(db.Chofer.ToList());
+            var query = db.Chofer.AsQueryable();
+            int totalItems = query.Count();
+
+            // Obtener los elementos paginados
+            var items = query.OrderBy(x => x.IdChofer)
+                             .Skip((page - 1) * pageSize)
+                             .Take(pageSize)
+                             .ToList();
+
+            // Mapear a DTO
+            var itemsDTO = items.Select(c => new ChoferDTOs
+            {
+                IdChofer = c.IdChofer,
+                Nombre = c.Nombre,
+                ApPaterno = c.ApPaterno,
+                ApMaterno = c.ApMaterno,
+                Telefono = c.Telefono,
+                FechaNacimiento = c.FechaNacimiento,
+                Licencia = c.Licencia,
+                UrlFoto = c.UrlFoto,
+                Disponibilidad = c.Disponibilidad,
+
+            }).ToList();
+
+            // Crear PageResult<CamionDTO>
+            var model = new PageResult<ChoferDTOs>
+            {
+                Items = itemsDTO,
+                PageNumber = page,
+                PageSize = pageSize,
+                TotalItems = totalItems,
+
+            };
+
+            return View(model);
         }
 
         // GET: Chofers/Details/5

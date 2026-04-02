@@ -1,81 +1,83 @@
-﻿@model IEnumerable<CamionesWebMVCGenMar.Models.Chofer>
+﻿@model CamionesWebMVCGenMar.Models.DTOs.PageResult<CamionesWebMVCGenMar.Models.DTOs.ChoferDTOs>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Choferes";
 }
 
-<h2>Index</h2>
+<div class="content-box shadow-sm">
+    <h2 class="text-primary mb-4">Listado de Choferes</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApPaterno)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ApMaterno)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Licencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UrlFoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Disponibilidad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaRegistro)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink("Agregar Nuevo Chofer", "Create", null, new { @class = "btn btn-success mb-3" })
+    </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ApPaterno)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ApMaterno)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Licencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UrlFoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Disponibilidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaRegistro)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdChofer }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdChofer }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdChofer })
-        </td>
-    </tr>
-}
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center align-middle bg-white">
+            <thead class="table-dark">
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Teléfono</th>
+                    <th>Licencia</th>
+                    <th>Disponibilidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.UrlFoto))
+                            {
+                                <img src="@item.UrlFoto" alt="Foto Chofer" class="img-thumbnail" style="width:60px; height:60px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <div class="bg-secondary text-white d-inline-flex align-items-center justify-content-center rounded" style="width:60px;height:60px">N/A</div>
+                            }
+                        </td>
+                        <td class="fw-bold text-primary">@item.Nombre</td>
+                        <td>@item.ApPaterno</td>
+                        <td>@item.ApMaterno</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Licencia</td>
+                        <td>
+                            <span class="badge @(item.Disponibilidad ? "bg-success" : "bg-danger")">
+                                @(item.Disponibilidad ? "Disponible" : "No Disponible")
+                            </span>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                @Html.ActionLink("Editar", "Edit", new { id = item.IdChofer }, new { @class = "btn btn-sm btn-outline-primary" })
+                                @Html.ActionLink("Detalles", "Details", new { id = item.IdChofer }, new { @class = "btn btn-sm btn-outline-secondary" })
+                                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdChofer }, new { @class = "btn btn-sm btn-outline-danger" })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-</table>
+    <!-- Paginación -->
+    <div class="d-flex justify-content-between align-items-center mt-4 p-3 bg-light rounded-3 shadow-sm">
+        <span class="text-muted fw-bold">
+            Página @Model.PageNumber de @Model.TotalPages
+            <span class="badge bg-secondary ms-2">Total: @Model.TotalItems choferes</span>
+        </span>
+
+        <nav>
+            <ul class="pagination mb-0">
+                <li class="page-item @(Model.PageNumber <= 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1, pageSize = Model.PageSize })">Anterior</a>
+                </li>
+                <li class="page-item @(Model.PageNumber >= Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1, pageSize = Model.PageSize })">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

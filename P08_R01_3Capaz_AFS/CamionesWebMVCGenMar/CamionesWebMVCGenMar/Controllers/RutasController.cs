@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CamionesWebMVCGenMar.Models;
+using CamionesWebMVCGenMar.Models.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,7 +8,6 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CamionesWebMVCGenMar.Models;
 
 namespace CamionesWebMVCGenMar.Controllers
 {
@@ -15,10 +16,41 @@ namespace CamionesWebMVCGenMar.Controllers
         private GenMarEntities db = new GenMarEntities();
 
         // GET: Rutas
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pageSize = 5)
         {
-            var ruta = db.Ruta.Include(r => r.Camiones).Include(r => r.Chofer);
-            return View(ruta.ToList());
+            var query = db.Ruta.Include(r => r.Camiones).Include(r => r.Chofer).AsQueryable();
+            int totalItems = query.Count();
+
+            var items = query.OrderBy(r => r.IdRuta)
+                             .Skip((page - 1) * pageSize)
+                             .Take(pageSize)
+                             .ToList();
+
+            var itemsDTO = items.Select(r => new RutaDTOs
+            {
+                IdRuta = r.IdRuta,
+                IdChofer = r.IdChofer,
+                IdCamion = r.IdCamion,
+                Origen = r.Origen,
+                Destino = r.Destino,
+                FechaSalida = r.FechaSalida,
+                FechaLlegada = r.FechaLlegada,
+                ATiempo = r.ATiempo,
+                Distancia = r.Distancia,
+                NombreChofer = r.Chofer.Nombre + " " + r.Chofer.ApPaterno,
+                LicenciaChofer = r.Chofer.Licencia,
+                MatriculaCamion = r.Camiones.Matricula
+            }).ToList();
+
+            var model = new PageResult<RutaDTOs>
+            {
+                Items = itemsDTO,
+                PageNumber = page,
+                PageSize = pageSize,
+                TotalItems = totalItems
+            };
+
+            return View(model);
         }
 
         // GET: Rutas/Details/5
