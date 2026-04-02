@@ -1,0 +1,81 @@
+﻿@model IEnumerable<CamionesWebMVCGenMar.Models.Ruta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Origen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaLlegada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ATiempo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distancia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Camiones.Matricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Chofer.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaLlegada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ATiempo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Distancia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Camiones.Matricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chofer.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdRuta }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdRuta }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdRuta })
+        </td>
+    </tr>
+}
+
+</table>

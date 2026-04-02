@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\camioneswebmvcgenmar\\controllers\\camionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|solutionrelative:camioneswebmvcgenmar\\controllers\\camionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|c:\\users\\stmme\\onedrive\\documentos2\\curso .net\\genmar\\proyecto 8\\p08_r01_3capaz_afs\\camioneswebmvcgenmar\\camioneswebmvcgenmar\\controllers\\choferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|solutionrelative:camioneswebmvcgenmar\\controllers\\choferscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|c:\\users\\stmme\\onedrive\\documentos2\\curso .net\\genmar\\proyecto 8\\p08_r01_3capaz_afs\\camioneswebmvcgenmar\\camioneswebmvcgenmar\\views\\camiones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|solutionrelative:camioneswebmvcgenmar\\views\\camiones\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\camioneswebmvcgenmar\\models\\dtos\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48B3A9E6-91BE-41F6-A44B-0139BBE9B163}|CamionesWebMVCGenMar\\CamionesWebMVCGenMar.csproj|solutionrelative:camioneswebmvcgenmar\\models\\dtos\\pageresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChofersController.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Controllers\\ChofersController.cs",
+              "RelativeDocumentMoniker": "CamionesWebMVCGenMar\\Controllers\\ChofersController.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Controllers\\ChofersController.cs",
+              "RelativeToolTip": "CamionesWebMVCGenMar\\Controllers\\ChofersController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T16:26:51.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Views\\Camiones\\Index.cshtml",
+              "RelativeDocumentMoniker": "CamionesWebMVCGenMar\\Views\\Camiones\\Index.cshtml",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Views\\Camiones\\Index.cshtml",
+              "RelativeToolTip": "CamionesWebMVCGenMar\\Views\\Camiones\\Index.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAIwFIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-02T15:00:48.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CamionesController.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Controllers\\CamionesController.cs",
+              "RelativeDocumentMoniker": "CamionesWebMVCGenMar\\Controllers\\CamionesController.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Controllers\\CamionesController.cs",
+              "RelativeToolTip": "CamionesWebMVCGenMar\\Controllers\\CamionesController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T14:40:12.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PageResult.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Models\\DTOs\\PageResult.cs",
+              "RelativeDocumentMoniker": "CamionesWebMVCGenMar\\Models\\DTOs\\PageResult.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\Proyecto 8\\P08_R01_3Capaz_AFS\\CamionesWebMVCGenMar\\CamionesWebMVCGenMar\\Models\\DTOs\\PageResult.cs",
+              "RelativeToolTip": "CamionesWebMVCGenMar\\Models\\DTOs\\PageResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T14:34:39.079Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

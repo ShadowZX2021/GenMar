@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GenMarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Camiones">
+    <Key>
+      <PropertyRef Name="IdCamion" />
+    </Key>
+    <Property Name="IdCamion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matricula" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoCamion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Modelo" Type="int" Nullable="false" />
+    <Property Name="Marca" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Capacidad" Type="int" Nullable="false" />
+    <Property Name="Kilometraje" Type="float" Nullable="false" />
+    <Property Name="Disponibilidad" Type="bit" Nullable="false" />
+    <Property Name="URLFoto" Type="nvarchar" MaxLength="255" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Chofer">
+    <Key>
+      <PropertyRef Name="IdChofer" />
+    </Key>
+    <Property Name="IdChofer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApPaterno" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApMaterno" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="Licencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlFoto" Type="nvarchar" MaxLength="255" />
+    <Property Name="Disponibilidad" Type="bit" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Ruta">
+    <Key>
+      <PropertyRef Name="IdRuta" />
+    </Key>
+    <Property Name="IdRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdChofer" Type="int" Nullable="false" />
+    <Property Name="IdCamion" Type="int" Nullable="false" />
+    <Property Name="Origen" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Destino" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="FechaSalida" Type="datetime" Nullable="false" />
+    <Property Name="FechaLlegada" Type="datetime" Nullable="false" />
+    <Property Name="ATiempo" Type="bit" Nullable="false" />
+    <Property Name="Distancia" Type="float" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GenMar.dbo.Vw_Camiones' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vw_Camiones">
+    <Key>
+      <PropertyRef Name="IdCamion" />
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="TipoCamion" />
+      <PropertyRef Name="Modelo" />
+      <PropertyRef Name="Marca" />
+      <PropertyRef Name="Capacidad" />
+      <PropertyRef Name="Kilometraje" />
+      <PropertyRef Name="Disponibilidad" />
+    </Key>
+    <Property Name="IdCamion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matricula" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TipoCamion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Modelo" Type="int" Nullable="false" />
+    <Property Name="Marca" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Capacidad" Type="int" Nullable="false" />
+    <Property Name="Kilometraje" Type="float" Nullable="false" />
+    <Property Name="Disponibilidad" Type="bit" Nullable="false" />
+    <Property Name="URLFoto" Type="nvarchar" MaxLength="255" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GenMar.dbo.Vw_Choferes' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vw_Choferes">
+    <Key>
+      <PropertyRef Name="IdChofer" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="ApPaterno" />
+      <PropertyRef Name="ApMaterno" />
+      <PropertyRef Name="Telefono" />
+      <PropertyRef Name="FechaNacimiento" />
+      <PropertyRef Name="Licencia" />
+      <PropertyRef Name="Disponibilidad" />
+    </Key>
+    <Property Name="IdChofer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApPaterno" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ApMaterno" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="Licencia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UrlFoto" Type="nvarchar" MaxLength="255" />
+    <Property Name="Disponibilidad" Type="bit" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'GenMar.dbo.Vw_Rutas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Vw_Rutas">
+    <Key>
+      <PropertyRef Name="IdRuta" />
+      <PropertyRef Name="IdChofer" />
+      <PropertyRef Name="IdCamion" />
+      <PropertyRef Name="Origen" />
+      <PropertyRef Name="Destino" />
+      <PropertyRef Name="FechaSalida" />
+      <PropertyRef Name="FechaLlegada" />
+      <PropertyRef Name="ATiempo" />
+      <PropertyRef Name="Distancia" />
+    </Key>
+    <Property Name="IdRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdChofer" Type="int" Nullable="false" />
+    <Property Name="IdCamion" Type="int" Nullable="false" />
+    <Property Name="Origen" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Destino" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="FechaSalida" Type="datetime" Nullable="false" />
+    <Property Name="FechaLlegada" Type="datetime" Nullable="false" />
+    <Property Name="ATiempo" Type="bit" Nullable="false" />
+    <Property Name="Distancia" Type="float" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Ruta__IdCamion__3C69FB99">
+    <End Role="Camiones" Type="Self.Camiones" Multiplicity="1" />
+    <End Role="Ruta" Type="Self.Ruta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Camiones">
+        <PropertyRef Name="IdCamion" />
+      </Principal>
+      <Dependent Role="Ruta">
+        <PropertyRef Name="IdCamion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ruta__IdChofer__3B75D760">
+    <End Role="Chofer" Type="Self.Chofer" Multiplicity="1" />
+    <End Role="Ruta" Type="Self.Ruta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chofer">
+        <PropertyRef Name="IdChofer" />
+      </Principal>
+      <Dependent Role="Ruta">
+        <PropertyRef Name="IdChofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Existe_Licencia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Licencia" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Existe_Matricula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Matricula" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Obtener_Camion_PorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCamion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Obtener_Chofer_PorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdChofer" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="Sp_Delete_Camiones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCamion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_Delete_Chofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdChofer" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_Delete_Ruta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRuta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ExisteEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_Insert_Camion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Matricula" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCamion" Type="varchar" Mode="In" />
+    <Parameter Name="Modelo" Type="int" Mode="In" />
+    <Parameter Name="Marca" Type="varchar" Mode="In" />
+    <Parameter Name="Capacidad" Type="int" Mode="In" />
+    <Parameter Name="Kilometraje" Type="float" Mode="In" />
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+    <Parameter Name="URLFoto" Type="varchar" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Sp_Insert_Chofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Licencia" Type="varchar" Mode="In" />
+    <Parameter Name="UrlFoto" Type="varchar" Mode="In" />
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Sp_Insert_Ruta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdChofer" Type="int" Mode="In" />
+    <Parameter Name="IdCamion" Type="int" Mode="In" />
+    <Parameter Name="Origen" Type="varchar" Mode="In" />
+    <Parameter Name="Destino" Type="varchar" Mode="In" />
+    <Parameter Name="FechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="FechaLlegada" Type="datetime" Mode="In" />
+    <Parameter Name="ATiempo" Type="bit" Mode="In" />
+    <Parameter Name="Distancia" Type="float" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Listar_Camiones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Sp_Listar_Choferes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Sp_Listar_Rutas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ATiempo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_ObtenerRutaPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRuta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_Obtenerusuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Update_Camion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCamion" Type="int" Mode="In" />
+    <Parameter Name="Matricula" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCamion" Type="varchar" Mode="In" />
+    <Parameter Name="Modelo" Type="int" Mode="In" />
+    <Parameter Name="Marca" Type="varchar" Mode="In" />
+    <Parameter Name="Capacidad" Type="int" Mode="In" />
+    <Parameter Name="Kilometraje" Type="float" Mode="In" />
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+    <Parameter Name="URLFoto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_Update_Chofer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdChofer" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Licencia" Type="varchar" Mode="In" />
+    <Parameter Name="UrlFoto" Type="varchar" Mode="In" />
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Sp_Update_Ruta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRuta" Type="int" Mode="In" />
+    <Parameter Name="IdChofer" Type="int" Mode="In" />
+    <Parameter Name="IdCamion" Type="int" Mode="In" />
+    <Parameter Name="Origen" Type="varchar" Mode="In" />
+    <Parameter Name="Destino" Type="varchar" Mode="In" />
+    <Parameter Name="FechaSalida" Type="datetime" Mode="In" />
+    <Parameter Name="FechaLlegada" Type="datetime" Mode="In" />
+    <Parameter Name="ATiempo" Type="bit" Mode="In" />
+    <Parameter Name="Distancia" Type="float" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateCamionSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CamionId" Type="int" Mode="In" />
+    <Parameter Name="Matricula" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoCamion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Modelo" Type="int" Mode="In" />
+    <Parameter Name="Marca" Type="nvarchar" Mode="In" />
+    <Parameter Name="Capacidad" Type="int" Mode="In" />
+    <Parameter Name="Kilometraje" Type="float" Mode="In" />
+    <Parameter Name="Disponibilidad" Type="bit" Mode="In" />
+    <Parameter Name="URLFoto" Type="nvarchar" Mode="In" />
+    <Parameter Name="FechaRegistro" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="GenMarModelStoreContainer">
+    <EntitySet Name="Camiones" EntityType="Self.Camiones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chofer" EntityType="Self.Chofer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ruta" EntityType="Self.Ruta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vw_Camiones" EntityType="Self.Vw_Camiones" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Camiones].[IdCamion] AS [IdCamion], 
+    [Vw_Camiones].[Matricula] AS [Matricula], 
+    [Vw_Camiones].[TipoCamion] AS [TipoCamion], 
+    [Vw_Camiones].[Modelo] AS [Modelo], 
+    [Vw_Camiones].[Marca] AS [Marca], 
+    [Vw_Camiones].[Capacidad] AS [Capacidad], 
+    [Vw_Camiones].[Kilometraje] AS [Kilometraje], 
+    [Vw_Camiones].[Disponibilidad] AS [Disponibilidad], 
+    [Vw_Camiones].[URLFoto] AS [URLFoto], 
+    [Vw_Camiones].[FechaRegistro] AS [FechaRegistro]
+    FROM [dbo].[Vw_Camiones] AS [Vw_Camiones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Choferes" EntityType="Self.Vw_Choferes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Choferes].[IdChofer] AS [IdChofer], 
+    [Vw_Choferes].[Nombre] AS [Nombre], 
+    [Vw_Choferes].[ApPaterno] AS [ApPaterno], 
+    [Vw_Choferes].[ApMaterno] AS [ApMaterno], 
+    [Vw_Choferes].[Telefono] AS [Telefono], 
+    [Vw_Choferes].[FechaNacimiento] AS [FechaNacimiento], 
+    [Vw_Choferes].[Licencia] AS [Licencia], 
+    [Vw_Choferes].[UrlFoto] AS [UrlFoto], 
+    [Vw_Choferes].[Disponibilidad] AS [Disponibilidad], 
+    [Vw_Choferes].[FechaRegistro] AS [FechaRegistro]
+    FROM [dbo].[Vw_Choferes] AS [Vw_Choferes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vw_Rutas" EntityType="Self.Vw_Rutas" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Vw_Rutas].[IdRuta] AS [IdRuta], 
+    [Vw_Rutas].[IdChofer] AS [IdChofer], 
+    [Vw_Rutas].[IdCamion] AS [IdCamion], 
+    [Vw_Rutas].[Origen] AS [Origen], 
+    [Vw_Rutas].[Destino] AS [Destino], 
+    [Vw_Rutas].[FechaSalida] AS [FechaSalida], 
+    [Vw_Rutas].[FechaLlegada] AS [FechaLlegada], 
+    [Vw_Rutas].[ATiempo] AS [ATiempo], 
+    [Vw_Rutas].[Distancia] AS [Distancia], 
+    [Vw_Rutas].[FechaRegistro] AS [FechaRegistro]
+    FROM [dbo].[Vw_Rutas] AS [Vw_Rutas]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Ruta__IdCamion__3C69FB99" Association="Self.FK__Ruta__IdCamion__3C69FB99">
+      <End Role="Camiones" EntitySet="Camiones" />
+      <End Role="Ruta" EntitySet="Ruta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ruta__IdChofer__3B75D760" Association="Self.FK__Ruta__IdChofer__3B75D760">
+      <End Role="Chofer" EntitySet="Chofer" />
+      <End Role="Ruta" EntitySet="Ruta" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

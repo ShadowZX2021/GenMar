@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GenMarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Camiones">
+    <Key>
+      <PropertyRef Name="IdCamion" />
+    </Key>
+    <Property Name="IdCamion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TipoCamion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Modelo" Type="Int32" Nullable="false" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Capacidad" Type="Int32" Nullable="false" />
+    <Property Name="Kilometraje" Type="Double" Nullable="false" />
+    <Property Name="Disponibilidad" Type="Boolean" Nullable="false" />
+    <Property Name="URLFoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Ruta" Relationship="Self.FK__Ruta__IdCamion__3C69FB99" FromRole="Camiones" ToRole="Ruta" />
+  </EntityType>
+  <EntityType Name="Chofer">
+    <Key>
+      <PropertyRef Name="IdChofer" />
+    </Key>
+    <Property Name="IdChofer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApPaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApMaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Licencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UrlFoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Disponibilidad" Type="Boolean" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Ruta" Relationship="Self.FK__Ruta__IdChofer__3B75D760" FromRole="Chofer" ToRole="Ruta" />
+  </EntityType>
+  <EntityType Name="Ruta">
+    <Key>
+      <PropertyRef Name="IdRuta" />
+    </Key>
+    <Property Name="IdRuta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdChofer" Type="Int32" Nullable="false" />
+    <Property Name="IdCamion" Type="Int32" Nullable="false" />
+    <Property Name="Origen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Destino" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaSalida" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaLlegada" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATiempo" Type="Boolean" Nullable="false" />
+    <Property Name="Distancia" Type="Double" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Camiones" Relationship="Self.FK__Ruta__IdCamion__3C69FB99" FromRole="Ruta" ToRole="Camiones" />
+    <NavigationProperty Name="Chofer" Relationship="Self.FK__Ruta__IdChofer__3B75D760" FromRole="Ruta" ToRole="Chofer" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Vw_Camiones">
+    <Key>
+      <PropertyRef Name="IdCamion" />
+      <PropertyRef Name="Matricula" />
+      <PropertyRef Name="TipoCamion" />
+      <PropertyRef Name="Modelo" />
+      <PropertyRef Name="Marca" />
+      <PropertyRef Name="Capacidad" />
+      <PropertyRef Name="Kilometraje" />
+      <PropertyRef Name="Disponibilidad" />
+    </Key>
+    <Property Name="IdCamion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TipoCamion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Modelo" Type="Int32" Nullable="false" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Capacidad" Type="Int32" Nullable="false" />
+    <Property Name="Kilometraje" Type="Double" Nullable="false" />
+    <Property Name="Disponibilidad" Type="Boolean" Nullable="false" />
+    <Property Name="URLFoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vw_Choferes">
+    <Key>
+      <PropertyRef Name="IdChofer" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="ApPaterno" />
+      <PropertyRef Name="ApMaterno" />
+      <PropertyRef Name="Telefono" />
+      <PropertyRef Name="FechaNacimiento" />
+      <PropertyRef Name="Licencia" />
+      <PropertyRef Name="Disponibilidad" />
+    </Key>
+    <Property Name="IdChofer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApPaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApMaterno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Licencia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UrlFoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Disponibilidad" Type="Boolean" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Vw_Rutas">
+    <Key>
+      <PropertyRef Name="IdRuta" />
+      <PropertyRef Name="IdChofer" />
+      <PropertyRef Name="IdCamion" />
+      <PropertyRef Name="Origen" />
+      <PropertyRef Name="Destino" />
+      <PropertyRef Name="FechaSalida" />
+      <PropertyRef Name="FechaLlegada" />
+      <PropertyRef Name="ATiempo" />
+      <PropertyRef Name="Distancia" />
+    </Key>
+    <Property Name="IdRuta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdChofer" Type="Int32" Nullable="false" />
+    <Property Name="IdCamion" Type="Int32" Nullable="false" />
+    <Property Name="Origen" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Destino" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FechaSalida" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FechaLlegada" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ATiempo" Type="Boolean" Nullable="false" />
+    <Property Name="Distancia" Type="Double" Nullable="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK__Ruta__IdCamion__3C69FB99">
+    <End Role="Camiones" Type="Self.Camiones" Multiplicity="1" />
+    <End Role="Ruta" Type="Self.Ruta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Camiones">
+        <PropertyRef Name="IdCamion" />
+      </Principal>
+      <Dependent Role="Ruta">
+        <PropertyRef Name="IdCamion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ruta__IdChofer__3B75D760">
+    <End Role="Chofer" Type="Self.Chofer" Multiplicity="1" />
+    <End Role="Ruta" Type="Self.Ruta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chofer">
+        <PropertyRef Name="IdChofer" />
+      </Principal>
+      <Dependent Role="Ruta">
+        <PropertyRef Name="IdChofer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GenMarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Camiones" EntityType="Self.Camiones" />
+    <EntitySet Name="Chofer" EntityType="Self.Chofer" />
+    <EntitySet Name="Ruta" EntityType="Self.Ruta" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Vw_Camiones" EntityType="Self.Vw_Camiones" />
+    <EntitySet Name="Vw_Choferes" EntityType="Self.Vw_Choferes" />
+    <EntitySet Name="Vw_Rutas" EntityType="Self.Vw_Rutas" />
+    <AssociationSet Name="FK__Ruta__IdCamion__3C69FB99" Association="Self.FK__Ruta__IdCamion__3C69FB99">
+      <End Role="Camiones" EntitySet="Camiones" />
+      <End Role="Ruta" EntitySet="Ruta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ruta__IdChofer__3B75D760" Association="Self.FK__Ruta__IdChofer__3B75D760">
+      <End Role="Chofer" EntitySet="Chofer" />
+      <End Role="Ruta" EntitySet="Ruta" />
+    </AssociationSet>
+    <FunctionImport Name="Existe_Licencia" ReturnType="Collection(Int32)">
+      <Parameter Name="Licencia" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Existe_Matricula" ReturnType="Collection(GenMarModel.Existe_Matricula_Result)">
+      <Parameter Name="Matricula" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Obtener_Camion_PorId" ReturnType="Collection(GenMarModel.Obtener_Camion_PorId_Result)">
+      <Parameter Name="IdCamion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Obtener_Chofer_PorId" ReturnType="Collection(GenMarModel.Obtener_Chofer_PorId_Result)">
+      <Parameter Name="IdChofer" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Delete_Camiones">
+      <Parameter Name="IdCamion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Delete_Chofer">
+      <Parameter Name="IdChofer" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Delete_Ruta">
+      <Parameter Name="IdRuta" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(GenMarModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(GenMarModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Insert_Camion">
+      <Parameter Name="Matricula" Mode="In" Type="String" />
+      <Parameter Name="TipoCamion" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="Int32" />
+      <Parameter Name="Marca" Mode="In" Type="String" />
+      <Parameter Name="Capacidad" Mode="In" Type="Int32" />
+      <Parameter Name="Kilometraje" Mode="In" Type="Double" />
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+      <Parameter Name="URLFoto" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Insert_Chofer">
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ApPaterno" Mode="In" Type="String" />
+      <Parameter Name="ApMaterno" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Licencia" Mode="In" Type="String" />
+      <Parameter Name="UrlFoto" Mode="In" Type="String" />
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Insert_Ruta">
+      <Parameter Name="IdChofer" Mode="In" Type="Int32" />
+      <Parameter Name="IdCamion" Mode="In" Type="Int32" />
+      <Parameter Name="Origen" Mode="In" Type="String" />
+      <Parameter Name="Destino" Mode="In" Type="String" />
+      <Parameter Name="FechaSalida" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaLlegada" Mode="In" Type="DateTime" />
+      <Parameter Name="ATiempo" Mode="In" Type="Boolean" />
+      <Parameter Name="Distancia" Mode="In" Type="Double" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Listar_Camiones" ReturnType="Collection(GenMarModel.Sp_Listar_Camiones_Result)">
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Listar_Choferes" ReturnType="Collection(GenMarModel.Sp_Listar_Choferes_Result)">
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Listar_Rutas" ReturnType="Collection(GenMarModel.Sp_Listar_Rutas_Result)">
+      <Parameter Name="ATiempo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_ObtenerRutaPorId" ReturnType="Collection(GenMarModel.SP_ObtenerRutaPorId_Result)">
+      <Parameter Name="IdRuta" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Update_Camion">
+      <Parameter Name="IdCamion" Mode="In" Type="Int32" />
+      <Parameter Name="Matricula" Mode="In" Type="String" />
+      <Parameter Name="TipoCamion" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="Int32" />
+      <Parameter Name="Marca" Mode="In" Type="String" />
+      <Parameter Name="Capacidad" Mode="In" Type="Int32" />
+      <Parameter Name="Kilometraje" Mode="In" Type="Double" />
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+      <Parameter Name="URLFoto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Update_Chofer">
+      <Parameter Name="IdChofer" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="ApPaterno" Mode="In" Type="String" />
+      <Parameter Name="ApMaterno" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="FechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="Licencia" Mode="In" Type="String" />
+      <Parameter Name="UrlFoto" Mode="In" Type="String" />
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Sp_Update_Ruta">
+      <Parameter Name="IdRuta" Mode="In" Type="Int32" />
+      <Parameter Name="IdChofer" Mode="In" Type="Int32" />
+      <Parameter Name="IdCamion" Mode="In" Type="Int32" />
+      <Parameter Name="Origen" Mode="In" Type="String" />
+      <Parameter Name="Destino" Mode="In" Type="String" />
+      <Parameter Name="FechaSalida" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaLlegada" Mode="In" Type="DateTime" />
+      <Parameter Name="ATiempo" Mode="In" Type="Boolean" />
+      <Parameter Name="Distancia" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="UpdateCamionSP">
+      <Parameter Name="CamionId" Mode="In" Type="Int32" />
+      <Parameter Name="Matricula" Mode="In" Type="String" />
+      <Parameter Name="TipoCamion" Mode="In" Type="String" />
+      <Parameter Name="Modelo" Mode="In" Type="Int32" />
+      <Parameter Name="Marca" Mode="In" Type="String" />
+      <Parameter Name="Capacidad" Mode="In" Type="Int32" />
+      <Parameter Name="Kilometraje" Mode="In" Type="Double" />
+      <Parameter Name="Disponibilidad" Mode="In" Type="Boolean" />
+      <Parameter Name="URLFoto" Mode="In" Type="String" />
+      <Parameter Name="FechaRegistro" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Usuarios" EntityType="GenMarModel.Usuarios" />
+    <FunctionImport Name="sp_ExisteEmail" ReturnType="Collection(GenMarModel.sp_ExisteEmail_Result)">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_InsertarUsuario">
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_Obtenerusuario" ReturnType="Collection(GenMarModel.sp_Obtenerusuario_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Existe_Matricula_Result">
+    <Property Type="Int32" Name="IdCamion" Nullable="false" />
+    <Property Type="String" Name="Matricula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoCamion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Modelo" Nullable="false" />
+    <Property Type="String" Name="Marca" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Capacidad" Nullable="false" />
+    <Property Type="Double" Name="Kilometraje" Nullable="false" />
+    <Property Type="Boolean" Name="Disponibilidad" Nullable="false" />
+    <Property Type="String" Name="URLFoto" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Obtener_Camion_PorId_Result">
+    <Property Type="Int32" Name="IdCamion" Nullable="false" />
+    <Property Type="String" Name="Matricula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoCamion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Modelo" Nullable="false" />
+    <Property Type="String" Name="Marca" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Capacidad" Nullable="false" />
+    <Property Type="Double" Name="Kilometraje" Nullable="false" />
+    <Property Type="Boolean" Name="Disponibilidad" Nullable="false" />
+    <Property Type="String" Name="URLFoto" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Obtener_Chofer_PorId_Result">
+    <Property Type="Int32" Name="IdChofer" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApPaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApMaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" />
+    <Property Type="String" Name="Licencia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UrlFoto" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="Disponibilidad" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Sp_Listar_Camiones_Result">
+    <Property Type="Int32" Name="IdCamion" Nullable="false" />
+    <Property Type="String" Name="Matricula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TipoCamion" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Modelo" Nullable="false" />
+    <Property Type="String" Name="Marca" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="Capacidad" Nullable="false" />
+    <Property Type="Double" Name="Kilometraje" Nullable="false" />
+    <Property Type="Boolean" Name="Disponibilidad" Nullable="false" />
+    <Property Type="String" Name="URLFoto" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Sp_Listar_Choferes_Result">
+    <Property Type="Int32" Name="IdChofer" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApPaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ApMaterno" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="15" />
+    <Property Type="DateTime" Name="FechaNacimiento" Nullable="false" />
+    <Property Type="String" Name="Licencia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UrlFoto" Nullable="true" MaxLength="255" />
+    <Property Type="Boolean" Name="Disponibilidad" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="Sp_Listar_Rutas_Result">
+    <Property Type="Int32" Name="IdRuta" Nullable="false" />
+    <Property Type="Int32" Name="IdChofer" Nullable="false" />
+    <Property Type="Int32" Name="IdCamion" Nullable="false" />
+    <Property Type="String" Name="Origen" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Destino" Nullable="false" MaxLength="200" />
+    <Property Type="DateTime" Name="FechaSalida" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaLlegada" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="ATiempo" Nullable="false" />
+    <Property Type="Double" Name="Distancia" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NombreChofer" Nullable="false" MaxLength="302" />
+    <Property Type="String" Name="Licencia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TelefonoChofer" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="FotoChofer" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FotoCamion" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Matricula" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SP_ObtenerRutaPorId_Result">
+    <Property Type="Int32" Name="IdRuta" Nullable="false" />
+    <Property Type="Int32" Name="IdChofer" Nullable="false" />
+    <Property Type="Int32" Name="IdCamion" Nullable="false" />
+    <Property Type="String" Name="Origen" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Destino" Nullable="false" MaxLength="200" />
+    <Property Type="DateTime" Name="FechaSalida" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="FechaLlegada" Nullable="false" Precision="23" />
+    <Property Type="Boolean" Name="ATiempo" Nullable="false" />
+    <Property Type="Double" Name="Distancia" Nullable="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="true" Precision="23" />
+    <Property Type="String" Name="NombreChofer" Nullable="false" MaxLength="302" />
+    <Property Type="String" Name="Licencia" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="TelefonoChofer" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="FotoChofer" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FotoCamion" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="Matricula" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+  </EntityType>
+  <ComplexType Name="sp_ExisteEmail_Result">
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="sp_Obtenerusuario_Result">
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="100" />
+  </ComplexType>
+</Schema>

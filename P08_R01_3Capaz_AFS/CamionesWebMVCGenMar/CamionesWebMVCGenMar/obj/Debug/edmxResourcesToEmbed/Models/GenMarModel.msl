@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GenMarModelStoreContainer" CdmEntityContainer="GenMarEntities">
+    <EntitySetMapping Name="Camiones">
+      <EntityTypeMapping TypeName="GenMarModel.Camiones">
+        <MappingFragment StoreEntitySet="Camiones">
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="TipoCamion" ColumnName="TipoCamion" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="URLFoto" ColumnName="URLFoto" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chofer">
+      <EntityTypeMapping TypeName="GenMarModel.Chofer">
+        <MappingFragment StoreEntitySet="Chofer">
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="UrlFoto" ColumnName="UrlFoto" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ruta">
+      <EntityTypeMapping TypeName="GenMarModel.Ruta">
+        <MappingFragment StoreEntitySet="Ruta">
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaLlegada" ColumnName="FechaLlegada" />
+          <ScalarProperty Name="ATiempo" ColumnName="ATiempo" />
+          <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GenMarModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Camiones">
+      <EntityTypeMapping TypeName="GenMarModel.Vw_Camiones">
+        <MappingFragment StoreEntitySet="Vw_Camiones">
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="TipoCamion" ColumnName="TipoCamion" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="URLFoto" ColumnName="URLFoto" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Choferes">
+      <EntityTypeMapping TypeName="GenMarModel.Vw_Choferes">
+        <MappingFragment StoreEntitySet="Vw_Choferes">
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="UrlFoto" ColumnName="UrlFoto" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vw_Rutas">
+      <EntityTypeMapping TypeName="GenMarModel.Vw_Rutas">
+        <MappingFragment StoreEntitySet="Vw_Rutas">
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaLlegada" ColumnName="FechaLlegada" />
+          <ScalarProperty Name="ATiempo" ColumnName="ATiempo" />
+          <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Existe_Licencia" FunctionName="GenMarModel.Store.Existe_Licencia" />
+    <FunctionImportMapping FunctionImportName="Existe_Matricula" FunctionName="GenMarModel.Store.Existe_Matricula">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Existe_Matricula_Result">
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="TipoCamion" ColumnName="TipoCamion" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="URLFoto" ColumnName="URLFoto" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Obtener_Camion_PorId" FunctionName="GenMarModel.Store.Obtener_Camion_PorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Obtener_Camion_PorId_Result">
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="TipoCamion" ColumnName="TipoCamion" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="URLFoto" ColumnName="URLFoto" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Obtener_Chofer_PorId" FunctionName="GenMarModel.Store.Obtener_Chofer_PorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Obtener_Chofer_PorId_Result">
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="UrlFoto" ColumnName="UrlFoto" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="GenMarModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="GenMarModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="Sp_Delete_Camiones" FunctionName="GenMarModel.Store.Sp_Delete_Camiones" />
+    <FunctionImportMapping FunctionImportName="Sp_Delete_Chofer" FunctionName="GenMarModel.Store.Sp_Delete_Chofer" />
+    <FunctionImportMapping FunctionImportName="Sp_Delete_Ruta" FunctionName="GenMarModel.Store.Sp_Delete_Ruta" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="GenMarModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="GenMarModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="GenMarModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Insert_Camion" FunctionName="GenMarModel.Store.Sp_Insert_Camion" />
+    <FunctionImportMapping FunctionImportName="Sp_Insert_Chofer" FunctionName="GenMarModel.Store.Sp_Insert_Chofer" />
+    <FunctionImportMapping FunctionImportName="Sp_Insert_Ruta" FunctionName="GenMarModel.Store.Sp_Insert_Ruta" />
+    <FunctionImportMapping FunctionImportName="Sp_Listar_Camiones" FunctionName="GenMarModel.Store.Sp_Listar_Camiones">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Sp_Listar_Camiones_Result">
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="TipoCamion" ColumnName="TipoCamion" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Capacidad" ColumnName="Capacidad" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="URLFoto" ColumnName="URLFoto" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Listar_Choferes" FunctionName="GenMarModel.Store.Sp_Listar_Choferes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Sp_Listar_Choferes_Result">
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="UrlFoto" ColumnName="UrlFoto" />
+          <ScalarProperty Name="Disponibilidad" ColumnName="Disponibilidad" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Listar_Rutas" FunctionName="GenMarModel.Store.Sp_Listar_Rutas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.Sp_Listar_Rutas_Result">
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaLlegada" ColumnName="FechaLlegada" />
+          <ScalarProperty Name="ATiempo" ColumnName="ATiempo" />
+          <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="NombreChofer" ColumnName="NombreChofer" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="TelefonoChofer" ColumnName="TelefonoChofer" />
+          <ScalarProperty Name="FotoChofer" ColumnName="FotoChofer" />
+          <ScalarProperty Name="FotoCamion" ColumnName="FotoCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ObtenerRutaPorId" FunctionName="GenMarModel.Store.SP_ObtenerRutaPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.SP_ObtenerRutaPorId_Result">
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="IdCamion" ColumnName="IdCamion" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="Destino" ColumnName="Destino" />
+          <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+          <ScalarProperty Name="FechaLlegada" ColumnName="FechaLlegada" />
+          <ScalarProperty Name="ATiempo" ColumnName="ATiempo" />
+          <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="NombreChofer" ColumnName="NombreChofer" />
+          <ScalarProperty Name="Licencia" ColumnName="Licencia" />
+          <ScalarProperty Name="TelefonoChofer" ColumnName="TelefonoChofer" />
+          <ScalarProperty Name="FotoChofer" ColumnName="FotoChofer" />
+          <ScalarProperty Name="FotoCamion" ColumnName="FotoCamion" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="GenMarModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="Sp_Update_Camion" FunctionName="GenMarModel.Store.Sp_Update_Camion" />
+    <FunctionImportMapping FunctionImportName="Sp_Update_Chofer" FunctionName="GenMarModel.Store.Sp_Update_Chofer" />
+    <FunctionImportMapping FunctionImportName="Sp_Update_Ruta" FunctionName="GenMarModel.Store.Sp_Update_Ruta" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="GenMarModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UpdateCamionSP" FunctionName="GenMarModel.Store.UpdateCamionSP" />
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="GenMarModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ExisteEmail" FunctionName="GenMarModel.Store.sp_ExisteEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.sp_ExisteEmail_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_InsertarUsuario" FunctionName="GenMarModel.Store.sp_InsertarUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_Obtenerusuario" FunctionName="GenMarModel.Store.sp_Obtenerusuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GenMarModel.sp_Obtenerusuario_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

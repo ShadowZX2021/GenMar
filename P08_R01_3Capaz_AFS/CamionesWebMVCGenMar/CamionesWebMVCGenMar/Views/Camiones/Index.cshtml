@@ -1,0 +1,83 @@
+﻿@model CamionesWebMVCGenMar.Models.DTOs.PageResult<CamionesWebMVCGenMar.Models.DTOs.CamionDTO>
+
+@{
+    ViewBag.Title = "Camiones";
+}
+
+<div class="content-box shadow-sm">
+    <h2 class="text-primary mb-4">Listado de Camiones</h2>
+
+    <p>
+        @Html.ActionLink("Agregar Nuevo Camión", "Create", null, new { @class = "btn btn-success mb-3" })
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered text-center align-middle bg-white">
+            <thead class="table-dark">
+                <tr>
+                    <th>Foto</th>
+                    <th>Matrícula</th>
+                    <th>Tipo</th>
+                    <th>Marca - Modelo</th>
+                    <th>Capacidad</th>
+                    <th>Kilometraje</th>
+                    <th>Disponibilidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.URLFoto))
+                            {
+                                <img src="@item.URLFoto" alt="Foto Camion" class="img-thumbnail" style="width:60px; height:60px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <div class="bg-secondary text-white d-inline-flex align-items-center justify-content-center rounded" style="width:60px;height:60px">N/A</div>
+                            }
+                        </td>
+                        <td class="fw-bold text-primary">@item.Matricula</td>
+                        <td>@item.TipoCamion</td>
+                        <td>@item.Marca - @item.Modelo</td>
+                        <td>@item.Capacidad</td>
+                        <td>@item.Kilometraje</td>
+                        <td>
+                            <span class="badge @(item.Disponible ? "bg-success" : "bg-danger")">
+                                @(item.Disponible ? "Disponible" : "No Disponible")
+                            </span>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                @Html.ActionLink("Editar", "Edit", new { id = item.IdCamion }, new { @class = "btn btn-sm btn-outline-primary" })
+                                @Html.ActionLink("Detalles", "Details", new { id = item.IdCamion }, new { @class = "btn btn-sm btn-outline-secondary" })
+                                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCamion }, new { @class = "btn btn-sm btn-outline-danger" })
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Paginación -->
+    <div class="d-flex justify-content-between align-items-center mt-4 p-3 bg-light rounded-3 shadow-sm">
+        <span class="text-muted fw-bold">
+            Página @Model.PageNumber de @Model.TotalPages
+            <span class="badge bg-secondary ms-2">Total: @Model.TotalItems unidades</span>
+        </span>
+
+        <nav>
+            <ul class="pagination mb-0">
+                <li class="page-item @(Model.PageNumber <= 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1, pageSize = Model.PageSize })">Anterior</a>
+                </li>
+                <li class="page-item @(Model.PageNumber >= Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1, pageSize = Model.PageSize })">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

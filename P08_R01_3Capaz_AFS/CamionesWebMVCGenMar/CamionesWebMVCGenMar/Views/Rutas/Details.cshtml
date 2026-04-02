@@ -1,0 +1,90 @@
+﻿@model CamionesWebMVCGenMar.Models.Ruta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ruta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Origen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Origen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaSalida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaLlegada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaLlegada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ATiempo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ATiempo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distancia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Camiones.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Camiones.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chofer.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chofer.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdRuta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
