@@ -1,0 +1,86 @@
+﻿@model ControlGastosMVC.Models.DatosPersonales
+
+@{
+    ViewBag.Title = "Editar Datos Personales";
+}
+
+<div class="card shadow p-4" style="max-width:700px; margin:auto; border-radius:15px;">
+
+    <h3 class="text-center mb-4" style="color:#8B0000;">
+        ✏️ Editar Datos Personales
+    </h3>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.IdDatos)
+
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+        
+        <div class="mb-3">
+            <label>Nombre</label>
+            @Html.EditorFor(m => m.Nombre, new { htmlAttributes = new { @class = "form-control", placeholder = "Nombre" } })
+            @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger" })
+        </div>
+
+       
+        <div class="mb-3">
+            <label>Apellido Paterno</label>
+            @Html.EditorFor(m => m.ApPaterno, new { htmlAttributes = new { @class = "form-control", placeholder = "Apellido Paterno" } })
+            @Html.ValidationMessageFor(m => m.ApPaterno, "", new { @class = "text-danger" })
+        </div>
+
+        
+        <div class="mb-3">
+            <label>Apellido Materno</label>
+            @Html.EditorFor(m => m.ApMaterno, new { htmlAttributes = new { @class = "form-control", placeholder = "Apellido Materno" } })
+            @Html.ValidationMessageFor(m => m.ApMaterno, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="mb-3">
+            <label>Teléfono</label>
+            @Html.EditorFor(m => m.Telefono, new { htmlAttributes = new { @class = "form-control", placeholder = "Teléfono" } })
+            @Html.ValidationMessageFor(m => m.Telefono, "", new { @class = "text-danger" })
+        </div>
+
+       
+        <div class="mb-3">
+            <label>Dirección</label>
+            @Html.EditorFor(m => m.Direccion, new { htmlAttributes = new { @class = "form-control", placeholder = "Dirección" } })
+            @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger" })
+        </div>
+
+        
+        <div class="mb-3">
+            <label>Sueldo Base</label>
+            @Html.EditorFor(m => m.SueldoBase, new { htmlAttributes = new { @class = "form-control", placeholder = "Sueldo Base" } })
+            @Html.ValidationMessageFor(m => m.SueldoBase, "", new { @class = "text-danger" })
+        </div>
+
+        
+        <div class="mb-3">
+            <label>Tipo de Sueldo</label>
+            @Html.DropDownList("IdTipoSueldo", null, "Seleccione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.IdTipoSueldo, "", new { @class = "text-danger" })
+        </div>
+
+        
+        <div class="mb-3">
+            <label>Estatus</label>
+            @Html.EditorFor(m => m.IdEstatus, new { htmlAttributes = new { @class = "form-control", placeholder = "Estatus" } })
+            @Html.ValidationMessageFor(m => m.IdEstatus, "", new { @class = "text-danger" })
+        </div>
+
+       
+        <div class="d-flex justify-content-between mt-4">
+            @Html.ActionLink("⬅ Volver", "Index", null, new { @class = "btn btn-secondary" })
+            <button type="submit" class="btn btn-danger">💾 Guardar Cambios</button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

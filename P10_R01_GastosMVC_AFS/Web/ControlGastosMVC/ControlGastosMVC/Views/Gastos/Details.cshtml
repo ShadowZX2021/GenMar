@@ -1,0 +1,46 @@
+﻿@model ControlGastosMVC.Models.Gastos
+
+@{
+    ViewBag.Title = "Detalle del Gasto";
+}
+
+<h2 class="mb-3">💰 Detalle del Gasto</h2>
+
+<div class="card mb-4" style="max-width:600px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Descripcion</h5>
+
+        <p class="card-text">
+            <strong>Monto:</strong> @Model.Monto?.ToString("C2")
+        </p>
+
+        <p class="card-text">
+            <strong>Fecha:</strong> @Model.Fecha?.ToString("dd/MM/yyyy HH:mm")
+        </p>
+
+        <p class="card-text">
+            <strong>Estatus:</strong>
+            @if (Model.IdEstatus == 1)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Inactivo</span>
+            }
+        </p>
+
+        <p class="card-text">
+            <strong>Categoría:</strong> @(Model.Categorias != null ? Model.Categorias.Nombre : "Sin Categoría")
+        </p>
+
+        <p class="card-text">
+            <strong>Usuario:</strong> @(Model.Usuarios != null ? Model.Usuarios.Nombre : "Sin Usuario")
+        </p>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("✏️ Editar", "Edit", new { id = Model.IdGastos }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("⬅️ Volver al listado", "Index", null, new { @class = "btn btn-secondary" })
+</div>

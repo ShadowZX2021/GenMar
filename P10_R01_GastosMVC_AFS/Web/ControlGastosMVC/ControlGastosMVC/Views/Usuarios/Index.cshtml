@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ControlGastosMVC.Models.Usuarios>
+
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2 class="mb-3">👥 Gestión de Usuarios</h2>
+
+<p>
+    @Html.ActionLink("➕ Nuevo Usuario", "Create", null, new { @class = "btn btn-danger" })
+</p>
+
+<table class="table table-custom">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Fecha Registro</th>
+            <th>Estatus</th>
+            <th>Persona</th>
+            <th>Rol</th>
+            <th style="width:180px;">Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Email</td>
+                <td>@item.FechaRegistro?.ToString("dd/MM/yyyy")</td>
+
+                <td>
+                    @if (item.IdEstatus == 1)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </td>
+
+                <td>@item.DatosPersonales.Nombre</td>
+
+                <td>
+                    @if (item.NivelUsuario.Descripcion == "Administrador")
+                    {
+                        <span class="badge bg-danger">Admin</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary">Usuario</span>
+                    }
+                </td>
+
+                <td>
+                    @Html.ActionLink("✏️", "Edit", new { id = item.IdUsuario }, new { @class = "btn btn-sm btn-warning" })
+                    @Html.ActionLink("👁️", "Details", new { id = item.IdUsuario }, new { @class = "btn btn-sm btn-info" })
+                    @Html.ActionLink("🗑️", "Delete", new { id = item.IdUsuario }, new { @class = "btn btn-sm btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\controlgastosmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|c:\\users\\stmme\\onedrive\\documentos2\\curso .net\\genmar\\controlgastosmvc\\controlgastosmvc\\models\\dtos\\datospersonalesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\models\\dtos\\datospersonalesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|c:\\users\\stmme\\onedrive\\documentos2\\curso .net\\genmar\\controlgastosmvc\\controlgastosmvc\\models\\dtos\\usuariosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\models\\dtos\\usuariosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|c:\\users\\stmme\\onedrive\\documentos2\\curso .net\\genmar\\controlgastosmvc\\controlgastosmvc\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\controlgastosmvc\\models\\dtos\\categoriasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\models\\dtos\\categoriasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\controlgastosmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57E5A484-6DDD-4073-9336-D29BC9B51CC0}|ControlGastosMVC\\ControlGastosMVC.csproj|solutionrelative:controlgastosmvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatosPersonalesDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\DatosPersonalesDTO.cs",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Models\\DTOs\\DatosPersonalesDTO.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\DatosPersonalesDTO.cs",
+              "RelativeToolTip": "ControlGastosMVC\\Models\\DTOs\\DatosPersonalesDTO.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T14:55:51.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuariosDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\UsuariosDTO.cs",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Models\\DTOs\\UsuariosDTO.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\UsuariosDTO.cs",
+              "RelativeToolTip": "ControlGastosMVC\\Models\\DTOs\\UsuariosDTO.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-06T14:55:33.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriasController.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Controllers\\CategoriasController.cs",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Controllers\\CategoriasController.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Controllers\\CategoriasController.cs",
+              "RelativeToolTip": "ControlGastosMVC\\Controllers\\CategoriasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T17:29:23.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoriasDTO.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\CategoriasDTO.cs",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Models\\DTOs\\CategoriasDTO.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Models\\DTOs\\CategoriasDTO.cs",
+              "RelativeToolTip": "ControlGastosMVC\\Models\\DTOs\\CategoriasDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-04T17:22:42.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ControlGastosMVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T14:16:27.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ControlGastosMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\stmme\\OneDrive\\Documentos2\\Curso .Net\\GenMar\\ControlGastosMVC\\ControlGastosMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ControlGastosMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T14:15:49.435Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

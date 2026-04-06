@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ControlGastosMVC.Models.DatosPersonalesVM>
+
+@{
+    ViewBag.Title = "Datos Personales";
+}
+
+<h2 class="mb-3">👤 Gestión de Datos Personales</h2>
+
+<p>
+    @Html.ActionLink("➕ Nuevo Registro", "Create", null, new { @class = "btn btn-danger mb-3" })
+</p>
+
+<table class="table table-custom">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>Sueldo Base</th>
+            <th>Estatus</th>
+            <th>Tipo Sueldo</th>
+            <th style="width:180px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.ApPaterno</td>
+                <td>@item.ApMaterno</td>
+                <td>@item.Telefono</td>
+                <td>@item.Direccion</td>
+                <td>@String.Format("{0:C}", item.SueldoBase)</td> 
+                <td>
+                    @if (item.IdEstatus == 1)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </td>
+                <td>@item.TipoSueldoDescripcion</td>
+                <td>
+                    @Html.ActionLink("✏️", "Edit", new { id = item.IdDatos }, new { @class = "btn btn-sm btn-warning" })
+                    @Html.ActionLink("👁️", "Details", new { id = item.IdDatos }, new { @class = "btn btn-sm btn-info" })
+                    @Html.ActionLink("🗑️", "Delete", new { id = item.IdDatos }, new { @class = "btn btn-sm btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

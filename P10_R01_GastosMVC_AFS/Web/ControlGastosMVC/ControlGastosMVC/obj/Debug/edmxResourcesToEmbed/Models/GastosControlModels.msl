@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ControlGastosModelStoreContainer" CdmEntityContainer="ControlGastosEntities">
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="ControlGastosModel.Categorias">
+        <MappingFragment StoreEntitySet="Categorias">
+          <ScalarProperty Name="IdCategorias" ColumnName="IdCategorias" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatosPersonales">
+      <EntityTypeMapping TypeName="ControlGastosModel.DatosPersonales">
+        <MappingFragment StoreEntitySet="DatosPersonales">
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="SueldoBase" ColumnName="SueldoBase" />
+          <ScalarProperty Name="IdTipoSueldo" ColumnName="IdTipoSueldo" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gastos">
+      <EntityTypeMapping TypeName="ControlGastosModel.Gastos">
+        <MappingFragment StoreEntitySet="Gastos">
+          <ScalarProperty Name="IdGastos" ColumnName="IdGastos" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdCategorias" ColumnName="IdCategorias" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NivelUsuario">
+      <EntityTypeMapping TypeName="ControlGastosModel.NivelUsuario">
+        <MappingFragment StoreEntitySet="NivelUsuario">
+          <ScalarProperty Name="IdNivelUsuario" ColumnName="IdNivelUsuario" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSueldo">
+      <EntityTypeMapping TypeName="ControlGastosModel.TipoSueldo">
+        <MappingFragment StoreEntitySet="TipoSueldo">
+          <ScalarProperty Name="IdTipoSueldo" ColumnName="IdTipoSueldo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="ControlGastosModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="IdNivelUsuario" ColumnName="IdNivelUsuario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ActualizarCategoria" FunctionName="ControlGastosModel.Store.sp_ActualizarCategoria" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizarDatosPersonales" FunctionName="ControlGastosModel.Store.sp_ActualizarDatosPersonales" />
+    <FunctionImportMapping FunctionImportName="sp_ActualizarUsario" FunctionName="ControlGastosModel.Store.sp_ActualizarUsario" />
+    <FunctionImportMapping FunctionImportName="sp_DropListDatosPersonales" FunctionName="ControlGastosModel.Store.sp_DropListDatosPersonales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_DropListDatosPersonales_Result">
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_EliminarCategoria" FunctionName="ControlGastosModel.Store.sp_EliminarCategoria" />
+    <FunctionImportMapping FunctionImportName="sp_EliminarDatosPersonales" FunctionName="ControlGastosModel.Store.sp_EliminarDatosPersonales" />
+    <FunctionImportMapping FunctionImportName="sp_EliminarGastos" FunctionName="ControlGastosModel.Store.sp_EliminarGastos" />
+    <FunctionImportMapping FunctionImportName="sp_EliminarUsuario" FunctionName="ControlGastosModel.Store.sp_EliminarUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_ExisteEmail" FunctionName="ControlGastosModel.Store.sp_ExisteEmail" />
+    <FunctionImportMapping FunctionImportName="sp_ExisteUsuario" FunctionName="ControlGastosModel.Store.sp_ExisteUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_GastosPorUsuario" FunctionName="ControlGastosModel.Store.sp_GastosPorUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_GastosPorUsuario_Result">
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_InsertarCategoria" FunctionName="ControlGastosModel.Store.sp_InsertarCategoria" />
+    <FunctionImportMapping FunctionImportName="sp_InsertarDatosPersonales" FunctionName="ControlGastosModel.Store.sp_InsertarDatosPersonales" />
+    <FunctionImportMapping FunctionImportName="sp_InsertarGastos" FunctionName="ControlGastosModel.Store.sp_InsertarGastos" />
+    <FunctionImportMapping FunctionImportName="sp_InsertarUsuario" FunctionName="ControlGastosModel.Store.sp_InsertarUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_ListarCategoria" FunctionName="ControlGastosModel.Store.sp_ListarCategoria">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ListarCategoria_Result">
+          <ScalarProperty Name="IdCategorias" ColumnName="IdCategorias" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ListarDatosPersonales" FunctionName="ControlGastosModel.Store.sp_ListarDatosPersonales">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ListarDatosPersonales_Result">
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ListarGastos" FunctionName="ControlGastosModel.Store.sp_ListarGastos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ListarGastos_Result">
+          <ScalarProperty Name="IdGastos" ColumnName="IdGastos" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdCategorias" ColumnName="IdCategorias" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NombrePersona" ColumnName="NombrePersona" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ListarUsuarios" FunctionName="ControlGastosModel.Store.sp_ListarUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ListarUsuarios_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_LoginUsuario" FunctionName="ControlGastosModel.Store.sp_LoginUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_LoginUsuario_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ObtenerCategoriasPorId" FunctionName="ControlGastosModel.Store.sp_ObtenerCategoriasPorId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ObtenerCategoriasPorId_Result">
+          <ScalarProperty Name="IdCategorias" ColumnName="IdCategorias" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstatus" ColumnName="IdEstatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ObtenerDatosPersonalesID" FunctionName="ControlGastosModel.Store.sp_ObtenerDatosPersonalesID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ObtenerDatosPersonalesID_Result">
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApPaterno" ColumnName="ApPaterno" />
+          <ScalarProperty Name="ApMaterno" ColumnName="ApMaterno" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ObtenerUsuarioId" FunctionName="ControlGastosModel.Store.sp_ObtenerUsuarioId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ControlGastosModel.sp_ObtenerUsuarioId_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdDatos" ColumnName="IdDatos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

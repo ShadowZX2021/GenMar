@@ -1,0 +1,10 @@
+USE TEST
+GO
+
+CREATE TABLE [dbo].[Gestores_bd](
+Id INT IDENTITY(1,1) PRIMARY KEY,
+Nombre NVARCHAR(50) NOT NULL,
+Lanzamiento INT NOT NULL,
+Desarrollador NVARCHAR(50)NOT NULL
+
+)

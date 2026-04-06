@@ -1,0 +1,47 @@
+﻿@model ControlGastosMVC.Models.Usuarios
+
+@{
+    ViewBag.Title = "Detalle del Usuario";
+}
+
+<h2 class="mb-3">👤 Detalle del Usuario</h2>
+
+<div class="card mb-4" style="max-width:600px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Nombre</h5>
+        <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+        <p class="card-text"><strong>Contraseña:</strong> @Model.Password</p>
+        <p class="card-text"><strong>Fecha de Registro:</strong> @Model.FechaRegistro?.ToString("dd/MM/yyyy")</p>
+
+        <p class="card-text">
+            <strong>Estatus:</strong>
+            @if (Model.IdEstatus == 1)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Inactivo</span>
+            }
+        </p>
+
+        <p class="card-text"><strong>Persona:</strong> @Model.DatosPersonales.Nombre</p>
+
+        <p class="card-text">
+            <strong>Rol:</strong>
+            @if (Model.NivelUsuario.Descripcion == "Administrador")
+            {
+                <span class="badge bg-danger">Admin</span>
+            }
+            else
+            {
+                <span class="badge bg-primary">Usuario</span>
+            }
+        </p>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("✏️ Editar", "Edit", new { id = Model.IdUsuario }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("⬅️ Volver al listado", "Index", null, new { @class = "btn btn-secondary" })
+</div>

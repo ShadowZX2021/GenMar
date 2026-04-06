@@ -1,0 +1,79 @@
+﻿@model ControlGastosMVC.Models.Gastos
+
+@{
+    ViewBag.Title = "Nuevo Gasto";
+}
+
+<div class="card shadow p-4" style="max-width:700px; margin:auto; border-radius:15px;">
+
+    <h3 class="text-center mb-4" style="color:#8B0000;">
+        💰 Nuevo Gasto
+    </h3>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+        <!-- USUARIO -->
+        <div class="mb-3">
+            <label>Usuario</label>
+            @Html.DropDownList("IdUsuario", null, "Seleccione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.IdUsuario, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- CATEGORÍA -->
+        <div class="mb-3">
+            <label>Categoría</label>
+            @Html.DropDownList("IdCategorias", null, "Seleccione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.IdCategorias, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- MONTO -->
+        <div class="mb-3">
+            <label>Monto</label>
+            @Html.TextBoxFor(m => m.Monto, "{0:F2}", new { @class = "form-control", placeholder = "0.00", type = "number", step = "0.01", min = "0" })
+            @Html.ValidationMessageFor(m => m.Monto, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- DESCRIPCIÓN -->
+        <div class="mb-3">
+            <label>Descripción</label>
+            @Html.TextBoxFor(m => m.Descripcion, new { @class = "form-control", placeholder = "Descripción del gasto" })
+            @Html.ValidationMessageFor(m => m.Descripcion, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- FECHA -->
+        <div class="mb-3">
+            <label>Fecha</label>
+            @Html.TextBoxFor(m => m.Fecha, "{0:yyyy-MM-ddTHH:mm}", new { @class = "form-control", type = "datetime-local" })
+            @Html.ValidationMessageFor(m => m.Fecha, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- ESTATUS -->
+        <div class="mb-3">
+            <label>Estatus</label>
+            @Html.DropDownListFor(m => m.IdEstatus,
+                new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "Activo", Value = "1" },
+                    new SelectListItem { Text = "Inactivo", Value = "0" }
+                },
+                "Seleccione...",
+                new { @class = "form-control" })
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-between mt-4">
+            @Html.ActionLink("⬅ Volver", "Index", null, new { @class = "btn btn-secondary" })
+            <button type="submit" class="btn btn-danger">
+                💾 Guardar
+            </button>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

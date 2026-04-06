@@ -1,0 +1,6 @@
+@GenMarApiGestores_HostAddress = http://localhost:5222
+
+GET {{GenMarApiGestores_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

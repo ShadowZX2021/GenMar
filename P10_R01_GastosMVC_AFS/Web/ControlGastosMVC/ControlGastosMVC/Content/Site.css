@@ -1,0 +1,217 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+body.login-body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #8B0000, #B22222, #2c2c2c, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    width: 350px;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-title {
+    text-align: center;
+    color: #8B0000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-login {
+    background-color: #8B0000;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+    .btn-login:hover {
+        background-color: #5a0000;
+    }
+
+input.form-control {
+    border-radius: 10px;
+}
+
+/* 🔴 Fondo animado */
+.login-body {
+    background: linear-gradient(-45deg, #8B0000, #B22222, #2c2c2c, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    height: 100vh;
+}
+
+/* Animación */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Caja login */
+.login-box {
+    width: 350px;
+    margin: 10% auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+/* Botón */
+.btn-login {
+    background-color: #8B0000;
+    color: white;
+    width: 100%;
+}
+
+    .btn-login:hover {
+        background-color: #5a0000;
+    }
+
+/* Layout general */
+body {
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background: #2c2c2c;
+    color: white;
+    padding-top: 20px;
+}
+
+    /* Título */
+    .sidebar h4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Links */
+    .sidebar a {
+        display: block;
+        color: white;
+        padding: 12px 20px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+        .sidebar a:hover {
+            background: #8B0000;
+        }
+
+/* Contenido principal */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: right;
+    padding: 10px;
+    color: #666;
+}
+
+/* 🔴 TABLA PRO */
+.table-custom {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+    .table-custom thead {
+        background: linear-gradient(45deg, #8B0000, #B22222) !important;
+        color: white !important;
+    }
+
+    .table-custom tbody tr:hover {
+        background-color: rgba(139, 0, 0, 0.2) !important;
+    }
+
+/* 🔥 BOTONES */
+.btn-warning {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+}
+
+.btn-info {
+    background-color: #607d8b;
+    border: none;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #8B0000;
+    border: none;
+}

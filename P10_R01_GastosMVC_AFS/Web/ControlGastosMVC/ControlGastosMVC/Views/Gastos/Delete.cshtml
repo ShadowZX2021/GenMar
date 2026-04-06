@@ -1,0 +1,53 @@
+﻿@model ControlGastosMVC.Models.Gastos
+
+@{
+    ViewBag.Title = "Eliminar Gasto";
+}
+
+<h2 class="mb-3">🗑️ Eliminar Gasto</h2>
+
+<h4>¿Estás seguro de que quieres eliminar este gasto?</h4>
+
+<div class="card mb-4" style="max-width:600px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Descripcion</h5>
+
+        <p class="card-text">
+            <strong>Monto:</strong> @(Model.Monto.HasValue ? Model.Monto.Value.ToString("C2") : "$0.00")
+        </p>
+
+        <p class="card-text">
+            <strong>Fecha:</strong> @(Model.Fecha.HasValue ? Model.Fecha.Value.ToString("dd/MM/yyyy HH:mm") : "Sin fecha")
+        </p>
+
+        <p class="card-text">
+            <strong>Estatus:</strong>
+            @if (Model.IdEstatus == 1)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Inactivo</span>
+            }
+        </p>
+
+        <p class="card-text">
+            <strong>Categoría:</strong> @(Model.Categorias != null ? Model.Categorias.Nombre : "Sin categoría")
+        </p>
+
+        <p class="card-text">
+            <strong>Usuario:</strong> @(Model.Usuarios != null ? Model.Usuarios.Nombre : "Sin usuario")
+        </p>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <input type="submit" value="🗑️ Eliminar" class="btn btn-danger" />
+        @Html.ActionLink("⬅️ Volver al listado", "Index", null, new { @class = "btn btn-secondary" })
+    </div>
+}

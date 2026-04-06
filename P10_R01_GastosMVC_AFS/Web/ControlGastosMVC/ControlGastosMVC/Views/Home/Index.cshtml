@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    var datos = ViewBag.Datos as List<ControlGastosMVC.Models.DTOs.GraficaGastosDTO>;
+    var usuarios = ViewBag.Usuarios as List<ControlGastosMVC.Models.Usuarios>;
+    var seleccionado = ViewBag.IdUsuarioSeleccionado;
+    var user = Session["Usuario"] as ControlGastosMVC.Models.Usuarios;
+}
+
+<h2>Dashboard de Gastos</h2>
+
+<!-- 🔽 FILTRO SOLO ADMIN -->
+@if (user.IdNivelUsuario == 1)
+{
+    <form method="get">
+        <label>Filtrar por usuario:</label>
+        <select name="idUsuario" onchange="this.form.submit()" class="form-control" style="width:300px;">
+            <option value="">-- Todos --</option>
+
+            @foreach (var u in usuarios)
+            {
+                <option value="@u.IdUsuario" @(seleccionado == u.IdUsuario ? "selected" : "")>
+                    @u.Nombre
+                </option>
+            }
+        </select>
+    </form>
+    <br />
+}
+
+<canvas id="grafica" style="max-width:700px;"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var labels = [];
+    var data = [];
+
+    @if (datos != null)
+    {
+        foreach (var item in datos)
+        {
+            <text>
+                labels.push("@item.Categoria");
+                data.push(@item.Total);
+            </text>
+        }
+    }
+
+    var ctx = document.getElementById('grafica').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Gastos por categoría',
+                data: data,
+
+
+                backgroundColor: [
+                    '#8B0000',
+                    '#A52A2A',
+                    '#B22222',
+                    '#DC143C',
+                    '#FF0000',
+                    '#800000'
+                ],
+                borderColor: '#5a0000',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#333'
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

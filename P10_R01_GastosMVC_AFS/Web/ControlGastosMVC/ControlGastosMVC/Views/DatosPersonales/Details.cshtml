@@ -1,0 +1,36 @@
+﻿@model ControlGastosMVC.Models.DatosPersonales
+
+@{
+    ViewBag.Title = "Detalle de Datos Personales";
+}
+
+<h2 class="mb-3">👤 Detalle del Registro</h2>
+
+<div class="card mb-4" style="max-width:600px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Nombre @Model.ApPaterno @Model.ApMaterno</h5>
+
+        <p class="card-text"><strong>Teléfono:</strong> @Model.Telefono</p>
+        <p class="card-text"><strong>Dirección:</strong> @Model.Direccion</p>
+        <p class="card-text"><strong>Sueldo Base:</strong> @(Model.SueldoBase.HasValue ? String.Format("{0:C}", Model.SueldoBase.Value) : "-")</p>
+
+        <p class="card-text">
+            <strong>Estatus:</strong>
+            @if (Model.IdEstatus == 1)
+            {
+                <span class="badge bg-success">Activo</span>
+            }
+            else
+            {
+                <span class="badge bg-secondary">Inactivo</span>
+            }
+        </p>
+
+        <p class="card-text"><strong>Tipo de Sueldo:</strong> @Model.TipoSueldo.Descripcion</p>
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("✏️ Editar", "Edit", new { id = Model.IdDatos }, new { @class = "btn btn-warning" })
+    @Html.ActionLink("⬅️ Volver al listado", "Index", null, new { @class = "btn btn-secondary" })
+</div>

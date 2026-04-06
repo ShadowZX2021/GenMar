@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ControlGastosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IdCategorias" />
+    </Key>
+    <Property Name="IdCategorias" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="DatosPersonales">
+    <Key>
+      <PropertyRef Name="IdDatos" />
+    </Key>
+    <Property Name="IdDatos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApPaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApMaterno" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="20" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="200" />
+    <Property Name="SueldoBase" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="IdTipoSueldo" Type="int" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Gastos">
+    <Key>
+      <PropertyRef Name="IdGastos" />
+    </Key>
+    <Property Name="IdGastos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="IdCategorias" Type="int" />
+    <Property Name="Monto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="NivelUsuario">
+    <Key>
+      <PropertyRef Name="IdNivelUsuario" />
+    </Key>
+    <Property Name="IdNivelUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoSueldo">
+    <Key>
+      <PropertyRef Name="IdTipoSueldo" />
+    </Key>
+    <Property Name="IdTipoSueldo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdDatos" Type="int" />
+    <Property Name="IdNivelUsuario" Type="int" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="IdEstatus" Type="int" />
+  </EntityType>
+  <Association Name="FK__DatosPers__IdTip__787EE5A0">
+    <End Role="TipoSueldo" Type="Self.TipoSueldo" Multiplicity="0..1" />
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSueldo">
+        <PropertyRef Name="IdTipoSueldo" />
+      </Principal>
+      <Dependent Role="DatosPersonales">
+        <PropertyRef Name="IdTipoSueldo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Gastos__IdCatego__03F0984C">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="0..1" />
+    <End Role="Gastos" Type="Self.Gastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IdCategorias" />
+      </Principal>
+      <Dependent Role="Gastos">
+        <PropertyRef Name="IdCategorias" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Gastos__IdUsuari__02FC7413">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Gastos" Type="Self.Gastos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Gastos">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__IdDato__7D439ABD">
+    <End Role="DatosPersonales" Type="Self.DatosPersonales" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DatosPersonales">
+        <PropertyRef Name="IdDatos" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdDatos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__IdNive__7E37BEF6">
+    <End Role="NivelUsuario" Type="Self.NivelUsuario" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NivelUsuario">
+        <PropertyRef Name="IdNivelUsuario" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="IdNivelUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_ActualizarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategorias" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizarDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApPaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="IdTipoSueldo" Type="int" Mode="In" />
+    <Parameter Name="SueldoBase" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="sp_ActualizarUsario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="IdNivelUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_DropListDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_EliminarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategorias" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminarDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+    <Parameter Name="IdEstatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminarGastos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGastos" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_EliminarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="IdEstatus" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ExisteEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ExisteUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_GastosPorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertarDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApPaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApMaterno" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="IdTipoSueldo" Type="int" Mode="In" />
+    <Parameter Name="SueldoBase" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertarGastos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="IdCategorias" Type="int" Mode="In" />
+    <Parameter Name="Monto" Type="decimal" Mode="In" />
+    <Parameter Name="Descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_InsertarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+    <Parameter Name="IdNivelUsuario" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ListarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ListarDatosPersonales" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ListarGastos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ListarUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_LoginUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_ObtenerCategoriasPorId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCategorias" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ObtenerDatosPersonalesID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDatos" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_ObtenerUsuarioId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="ControlGastosModelStoreContainer">
+    <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gastos" EntityType="Self.Gastos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NivelUsuario" EntityType="Self.NivelUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoSueldo" EntityType="Self.TipoSueldo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DatosPers__IdTip__787EE5A0" Association="Self.FK__DatosPers__IdTip__787EE5A0">
+      <End Role="TipoSueldo" EntitySet="TipoSueldo" />
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Gastos__IdCatego__03F0984C" Association="Self.FK__Gastos__IdCatego__03F0984C">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Gastos" EntitySet="Gastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Gastos__IdUsuari__02FC7413" Association="Self.FK__Gastos__IdUsuari__02FC7413">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Gastos" EntitySet="Gastos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__IdDato__7D439ABD" Association="Self.FK__Usuarios__IdDato__7D439ABD">
+      <End Role="DatosPersonales" EntitySet="DatosPersonales" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__IdNive__7E37BEF6" Association="Self.FK__Usuarios__IdNive__7E37BEF6">
+      <End Role="NivelUsuario" EntitySet="NivelUsuario" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
